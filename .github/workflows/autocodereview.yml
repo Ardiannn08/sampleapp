@@ -3,8 +3,8 @@ name: golangci-lint
   pull_request:
     branches: [main]
 env:
-  HOME: /root/_work/
-  GOPATH: /root/_work/go
+  # HOME: /root/_work/
+  GOPATH: ${{ github.workspace }}/go
   GO111MODULE: "on"
 jobs:
   golangci:
@@ -29,9 +29,7 @@ jobs:
           # --new-from-rev=origin/main ==> (only scan all code code changes between current branch with main branch)
           # --config=.golangci.yml ==> config path for golangci-lint configuration file
           golangci_lint_flags: "--config=.golangci.yml --new-from-rev=origin/main"
-          workdir: /root/_work
           go_version: 1.15.2
         env: 
-          GOPATH: /root/_work/sampleapp/go
-          GOCACHE: /root/_work/sampleapp/Caches
-          GOLANGCI_LINT_CACHE: /root/_work/sampleapp/Caches
+          GOCACHE: ${{ github.workspace }}/go/Caches
+          GOLANGCI_LINT_CACHE: ${{ github.workspace }}/Caches
