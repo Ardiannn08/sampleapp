@@ -17,7 +17,6 @@ jobs:
       - name: Review
         uses: reviewdog/action-golangci-lint@v2
         with:
-          tool_name: "golangci-autoreview"
           reporter: "github-pr-review"
 
           # passing configuration flags to golangci-lint
