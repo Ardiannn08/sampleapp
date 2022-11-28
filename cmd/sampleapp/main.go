@@ -26,7 +26,6 @@ func sampleDeadcodes() {
 }
 
 func unecessaryNewLine() error {
-
 	// sample 3 ^ uncessary new line
 	var username string
 	fmt.Println("username: ", username)
