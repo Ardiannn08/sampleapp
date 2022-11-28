@@ -9,7 +9,7 @@ func main() {
 	//
 	// nilness potential
 	var points []int
-	fmt.Println("show point for index '5'", points[5])
+	fmt.Println("show point for index   '5'", points[5])
 
 	// sample 4
 	//
